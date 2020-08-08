@@ -49,6 +49,10 @@
   color: white;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: 5px;
+     -moz-text-size-adjust: 5px;
+      -ms-text-size-adjust: 5px;
+          text-size-adjust: 5px;
 }
 
 #mobile-sidebar {
@@ -62,8 +66,8 @@
   width: 25%;
   float: left;
   background-color: burlywood;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 6fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 6fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 5fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 5fr 1fr;
 }
 
 #mobile-content {
@@ -80,16 +84,27 @@
       grid-template-rows: 3fr 3fr 3fr;
   -ms-grid-columns: (3fr)[3];
       grid-template-columns: repeat(3, 3fr);
+  border-style: bold;
+  border-color: white;
 }
 
-#mobile-content img {
+#mobile-content div {
+  width: 100%;
+  height: 100%;
+}
+
+#mobile-content div img {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-height: 100px;
-  max-width: 100px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-style: solid;
+  border-color: white;
 }
 
 #mobile-footer {
@@ -101,7 +116,7 @@
           align-items: center;
   height: 5vh;
   width: 100%;
-  position: fixed;
+  position: relative;
   bottom: 0;
   background-color: red;
 }
