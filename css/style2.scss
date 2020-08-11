@@ -4,6 +4,7 @@
 }
 
 @import "variables";
+@import "mixins";
 
 .button {
     background-color: $lighttan;
@@ -22,7 +23,7 @@
 }
 
 .button:hover {
-    color: $red;
+    color: $black;
     transition: ease-in-out 0.5s;
 }
 
@@ -78,17 +79,41 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 85vh;
+    height: 83.2vh;
     width: 75%;
     float: right;
-    grid-template-rows: repeat(3, 3fr);
+    grid-template-rows: 2fr 0.5fr 2fr 0.5fr 2fr 0.5fr;
     grid-template-columns: repeat(3, 3fr);
     border-style: bold;
     border-color: $darktan;
+
+    #content5 {
+        background-color: $lighttan;
+    }
+
+    #content10 {
+        background-color: $lighttan;
+    }
+
+    #content12 {
+        background-color: $lighttan;
+    }
+
+    #content17 {
+        background-color: $lighttan;
+    }
     div {
         width: 100%;
         height: 100%;
-        background-color: $red;
+        background-color: $darktan;
+        max-width: 20vw;
+        max-height: 20vh;
+        font-family: $font;
+        font-size: 12px;
+        text-align: center;
+
+
+
 
         img {
             display: grid;
@@ -99,11 +124,7 @@
             border-style: solid;
             border-color: white;
             
-            
         }
-    #content1 {
-        display: grid;
-
     }
 }
 
