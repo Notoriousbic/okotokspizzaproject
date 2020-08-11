@@ -3,19 +3,26 @@
     padding: 0;
 }
 
+@import "variables";
+
 .button {
-    background-color: burlywood;
+    background-color: $lighttan;
     border: none;
-    color: white;
+    color: $black;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
+    
+}
+
+.activepage {
+    color: $red;
 }
 
 .button:hover {
-    color: black;
+    color: $red;
     transition: ease-in-out 0.5s;
 }
 
@@ -26,7 +33,7 @@
     height: 10vh;
     width: 100%;
     grid-template-columns: 2fr 4fr 2fr;
-    background-color: red;
+    background-color: $red;
 
     #header1 {
         img{
@@ -46,7 +53,7 @@
         text-align: center;
         color:white;
         font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $font;
         text-size-adjust: 5px;
     
     }   
@@ -58,11 +65,13 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 85vh;
+    height: 90vh;
     width: 25%;
     float: left;
-    background-color: burlywood;
+    background-color: $lighttan;
     grid-template-rows: 1fr 1fr 1fr 1fr 5fr 1fr;
+    font-family: $font;
+    
 }
 
 #mobile-content {
@@ -72,13 +81,14 @@
     height: 85vh;
     width: 75%;
     float: right;
-    grid-template-rows: 3fr 3fr 3fr;
+    grid-template-rows: repeat(3, 3fr);
     grid-template-columns: repeat(3, 3fr);
     border-style: bold;
-    border-color: white;
+    border-color: $darktan;
     div {
         width: 100%;
         height: 100%;
+        background-color: $red;
 
         img {
             display: grid;
@@ -89,7 +99,11 @@
             border-style: solid;
             border-color: white;
             
+            
         }
+    #content1 {
+        display: grid;
+
     }
 }
 
@@ -97,9 +111,9 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 5vh;
+    height: 6.75vh;
     width: 100%;
-    position: relative;
+    position: fixed;
     bottom: 0;
-    background-color: red;
+    background-color: $red;
 }  
