@@ -6,6 +6,10 @@
 @import "variables";
 @import "mixins";
 
+.content {
+
+
+}
 .button {
     background-color: $lighttan;
     border: none;
@@ -13,7 +17,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px; 
     cursor: pointer;
     
 }
@@ -35,6 +39,7 @@
     width: 100%;
     grid-template-columns: 2fr 4fr 2fr;
     background-color: $red;
+    position: relative;
 
     #header1 {
         img{
@@ -55,7 +60,7 @@
         color:white;
         font-weight: bold;
         font-family: $font;
-        text-size-adjust: 5px;
+        text-size-adjust: 10px;
     
     }   
 }
@@ -72,6 +77,7 @@
     background-color: $lighttan;
     grid-template-rows: 1fr 1fr 1fr 1fr 5fr 1fr;
     font-family: $font;
+    font-size: 2rem;
     
 }
 
@@ -86,6 +92,8 @@
     grid-template-columns: repeat(3, 3fr);
     border-style: bold;
     border-color: $darktan;
+    font-size: 8px;
+
 
     #content5 {
         background-color: $lighttan;
@@ -93,6 +101,7 @@
 
     #content10 {
         background-color: $lighttan;
+
     }
 
     #content12 {
@@ -109,7 +118,6 @@
         max-width: 20vw;
         max-height: 20vh;
         font-family: $font;
-        font-size: 12px;
         text-align: center;
 
 
@@ -132,9 +140,57 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 6.75vh;
+    height: 6vh;
     width: 100%;
     position: fixed;
     bottom: 0;
     background-color: $red;
 }  
+
+#mobile-aboutus {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr 2fr;
+    height: 84vh;
+    
+
+    img {
+        display: grid;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+
+    #aboutus1 {
+        background-color: $darktan;
+        border: solid $black;
+    }
+
+    #aboutus2 {
+        background-color: $darktan;
+        border: solid $black;
+    }
+
+    #aboutus3 {
+        background-color: $darktan;
+        border: solid $black;
+    }
+
+    
+
+}
+
+@media screen and (min-width: $break-small) {
+    #content4 {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: $break-big) {
+    #content4 {
+        font-size: 12px;
+    }
+}
+
+
