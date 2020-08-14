@@ -11,7 +11,7 @@
 
 }
 .button {
-    background-color: $lighttan;
+    background-color: $darktan;
     border: none;
     color: $black;
     text-align: center;
@@ -39,7 +39,7 @@
     width: 100%;
     grid-template-columns: 2fr 4fr 2fr;
     background-color: $red;
-    position: relative;
+    position: fixed;
 
     #header1 {
         img{
@@ -71,10 +71,10 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 90vh;
+    height: 235vh;
     width: 25%;
     float: left;
-    background-color: $lighttan;
+    background-color: $darktan;
     grid-template-rows: 1fr 1fr 1fr 1fr 5fr 1fr;
     font-family: $font;
     font-size: 2rem;
@@ -85,10 +85,10 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 83.2vh;
+    height: 230vh;
     width: 75%;
     float: right;
-    grid-template-rows: 2fr 0.5fr 2fr 0.5fr 2fr 0.5fr;
+    grid-template-rows: 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr;
     grid-template-columns: repeat(3, 3fr);
     border-style: bold;
     border-color: $darktan;
@@ -150,8 +150,8 @@
 #mobile-aboutus {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 2fr 2fr;
-    height: 84vh;
+    grid-template-rows: 3fr 2fr 3fr;
+    height: 180vh;
     
 
     img {
@@ -171,6 +171,11 @@
     #aboutus2 {
         background-color: $darktan;
         border: solid $black;
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     #aboutus3 {
@@ -183,8 +188,11 @@
 }
 
 @media screen and (min-width: $break-small) {
-    #content4 {
-        font-size: 10px;
+    #mobile-content {
+        font-size: 13px;
+    }
+    #mobile-sidebar {
+        width: 20vw;
     }
 }
 @media screen and (min-width: $break-big) {
