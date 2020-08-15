@@ -2,25 +2,41 @@
     margin: 0;
     padding: 0;
 }
+img {
+
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    
+}
 
 @import "variables";
 @import "mixins";
 
-.content {
-
-
-}
 .button {
-    background-color: $darktan;
+    background-color: $lighttan;
     border: none;
     color: $black;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: grid;
     font-size: 20px; 
+    
+}
+
+.button2 {
+    background-color: $red;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px; 
     cursor: pointer;
     
 }
+
+
 
 .activepage {
     color: $red;
@@ -40,6 +56,7 @@
     grid-template-columns: 2fr 4fr 2fr;
     background-color: $red;
     position: fixed;
+    z-index: 10;
 
     #header1 {
         img{
@@ -66,26 +83,25 @@
 }
 
 
-
-#mobile-sidebar {
+#mobile-sidebar2, #mobile-sidebar {
     display: grid;
-    justify-items: center;
-    align-items: center;
-    height: 235vh;
+    height: 100%;
     width: 25%;
-    float: left;
-    background-color: $darktan;
+    position: fixed;
+    background-color: $lighttan;
     grid-template-rows: 1fr 1fr 1fr 1fr 5fr 1fr;
     font-family: $font;
     font-size: 2rem;
     
+    
 }
+
 
 #mobile-content {
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 230vh;
+    height: 290vh;
     width: 75%;
     float: right;
     grid-template-rows: 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr;
@@ -93,6 +109,10 @@
     border-style: bold;
     border-color: $darktan;
     font-size: 8px;
+
+    div {
+        border: solid black;
+    }
 
 
     #content5 {
@@ -111,6 +131,31 @@
     #content17 {
         background-color: $lighttan;
     }
+    #content23 {
+        background-color: $lighttan;
+    }
+    #content28 {
+        background-color: $lighttan;
+    }
+    #content30 {
+        background-color: $lighttan;
+    }
+    #content35 {
+        background-color: $lighttan;
+    }
+    #content40 {
+        background-color: $lighttan;
+    }
+    #content42 {
+        background-color: $lighttan;
+    }
+    #content46 {
+        background-color: $lighttan;
+    }
+    #content48 {
+        background-color: $lighttan;
+    }
+    
     div {
         width: 100%;
         height: 100%;
@@ -140,65 +185,106 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 6vh;
+    height: 7vh;
     width: 100%;
     position: fixed;
     bottom: 0;
     background-color: $red;
+    grid-template-columns: 2fr 3fr 2fr;
+    z-index: 10;
+    color: white;
+    
+
+    #footer3 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        font-size: 10px;
+        font-family: $font;
+        text-align: left;
+        height: 1vh
+
+    }
+
+    #footer1{
+
+        font-size: 10px;
+    }
 }  
 
 #mobile-aboutus {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 2fr 3fr;
-    height: 180vh;
+    grid-template-rows: 3fr 1fr 3fr;
+    height: 400vh; 
+    width: 75%;
+    float: right;
+    border: 0;
     
+    #aboutus1 {
+        background-color: $lighttan;
+        border: solid blac;
+    }
+
+    #aboutus2 {
+        background-color: $lighttan;
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: solid black;
+        }
+    }
+
+    #aboutus3 {
+        background-color: $darktan;
+        text-align: center;
+        font-family: $font;
+        font-size: 20px;
+        border: solid black;
+        display: left; 
+        width: 100%; 
+    }
+
+    
+
+}
+
+
+#mobile-index {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr;
+    height: 100vh;
+    text-align: center;
+    text-align: center;
+    background-color: $darktan;
+    width: 75%;
+    margin-left: 25%;
+
+    #mindex1 {
+        display: grid;
+    }
 
     img {
         display: grid;
         align-items: center;
         height: 100%;
         width: 100%;
-        object-fit: cover;
-        
+    }
+    iframe {
+        width: 100%;
     }
 
-    #aboutus1 {
-        background-color: $darktan;
-        border: solid $black;
-    }
-
-    #aboutus2 {
-        background-color: $darktan;
-        border: solid $black;
-        
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    #aboutus3 {
-        background-color: $darktan;
-        border: solid $black;
-    }
-
-    
 
 }
 
 @media screen and (min-width: $break-small) {
     #mobile-content {
-        font-size: 13px;
-    }
-    #mobile-sidebar {
-        width: 20vw;
+        font-size: 10px;
+
     }
 }
-@media screen and (min-width: $break-big) {
-    #content4 {
-        font-size: 12px;
-    }
-}
+
+
 
 
